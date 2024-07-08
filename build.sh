@@ -26,6 +26,9 @@ function checkAK3 {
 	else
   		echo "AnyKernel3 is not found. Will be downloaded..."
   		git clone https://github.com/SametBozkurt/AnyKernel3.git
+  		cd "$AK_DIR"
+  		rm -r -f .git
+  		cd "$current_dir"
 	fi
 	echo "Toolchain and AnyKernel are set. Starting compilation in "
 	for (( i=5; i>=0; i-- )); do
